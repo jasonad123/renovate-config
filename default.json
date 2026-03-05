@@ -3,7 +3,8 @@
   "extends": [
     "config:best-practices",
     ":semanticCommits",
-    "helpers:disableTypesNodeMajor"
+    "helpers:disableTypesNodeMajor",
+    ":preserveSemverRanges"
   ],
   "labels": ["dependencies", "renovate"],
   "timezone": "America/New_York",
