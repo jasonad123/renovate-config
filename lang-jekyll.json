@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": "Group GitHub Pages ecosystem gems",
+      "matchManagers": ["bundler"],
+      "matchPackageNames": ["github-pages", "jekyll", "jekyll-*", "minima", "just-the-docs"],
+      "groupName": "GitHub Pages packages",
+      "schedule": ["* 0-3 * * 1"]
+    },
+    {
+      "description": "Group Ruby linting and formatting tools",
+      "matchManagers": ["bundler"],
+      "matchPackageNames": ["rubocop", "rubocop-*", "standard", "standardrb"],
+      "groupName": "Ruby linting",
+      "schedule": ["* 0-3 * * 1"]
+    }
+  ],
+  "postUpdateOptions": [
+    "bundlerConservative"
+  ]
+}
