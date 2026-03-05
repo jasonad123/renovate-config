@@ -5,12 +5,12 @@
     ":semanticCommits"
   ],
   "labels": ["dependencies", "renovate"],
-  "dependencyDashboard": true,
+  "timezone": "America/New_York",
   "prHourlyLimit": 4,
-  "minimumReleaseAge" : "7 days",
+  "minimumReleaseAge": "7 days",
   "ignorePaths": [
-    "compose.yaml",
-    "railway.json"
+    "**/compose.yaml",
+    "**/railway.json"
   ],
   "packageRules": [
     {

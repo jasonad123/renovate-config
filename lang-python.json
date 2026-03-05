@@ -1,0 +1,27 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": "Group FastAPI ecosystem updates",
+      "matchPackageNames": ["fastapi", "starlette", "uvicorn", "pydantic"],
+      "groupName": "FastAPI packages",
+      "schedule": ["* 0-3 * * 1"]
+    },
+    {
+      "description": "Group Python testing tools",
+      "matchPackageNames": ["pytest", "pytest-*"],
+      "groupName": "Python testing",
+      "schedule": ["* 0-3 * * 1"]
+    },
+    {
+      "description": "Group Python linting and formatting tools",
+      "matchPackageNames": ["ruff", "black", "mypy", "flake8"],
+      "groupName": "Python linting",
+      "schedule": ["* 0-3 * * 1"]
+    }
+  ],
+  "postUpdateOptions": [
+    "pipenvUpdate",
+    "poetryUpdate"
+  ]
+}
