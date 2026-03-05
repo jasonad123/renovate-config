@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "description": "Group Go standard library extensions",
+      "matchPackageNames": ["golang.org/x/**"],
+      "groupName": "Go x/ packages",
+      "schedule": ["* 0-3 * * 1"]
+    },
+    {
+      "description": "Group Go tooling updates",
+      "matchPackageNames": ["github.com/golangci/golangci-lint", "github.com/goreleaser/goreleaser"],
+      "groupName": "Go tools",
+      "schedule": ["* 0-3 * * 1"]
+    }
+  ],
+  "postUpdateOptions": [
+    "gomodTidy"
+  ]
+}

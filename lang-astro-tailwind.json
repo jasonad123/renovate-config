@@ -1,26 +1,24 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": [
-    "group:astroMonorepo",
-    "group:tailwindcssMonorepo",
+  "extends": [
     "group:vite"
   ],
   "packageRules": [
     {
       "description": "Group Astro ecosystem updates",
-      "matchPackageNames": ["^@astrojs/", "astro"],
+      "matchPackageNames": ["@astrojs/**", "astro"],
       "groupName": "Astro packages",
       "schedule": ["* 0-3 * * 1"]
     },
     {
       "description": "Group Tailwind ecosystem updates",
-      "matchPackageNames": ["^@tailwindcss/", "tailwindcss"],
+      "matchPackageNames": ["@tailwindcss/**", "tailwindcss"],
       "groupName": "Tailwind packages",
       "schedule": ["* 0-3 * * 1"]
     },
     {
       "description": "Group Cloudflare ecosystem updates",
-      "matchPackageNames": ["^@cloudflare/", "cloudflare", "^wrangler"],
+      "matchPackageNames": ["@cloudflare/**", "cloudflare", "wrangler*"],
       "groupName": "Cloudflare packages",
       "schedule": ["* 0-3 * * 1"]
     }

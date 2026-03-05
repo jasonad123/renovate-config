@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": [
+  "extends": [
     "group:vite"
   ],
   "ignorePaths": [
@@ -8,14 +8,8 @@
   ],
   "packageRules": [
     {
-      "description": "Group SvelteKit ecosystem updates",
-      "matchPackageNames": ["^@sveltejs/", "svelte"],
-      "groupName": "SvelteKit packages",
-      "schedule": ["* 0-3 * * 1"]
-    },
-    {
       "description": "Group Svelte ecosystem updates",
-      "matchPackageNames": ["^svelte/"],
+      "matchPackageNames": ["@sveltejs/**", "svelte", "svelte-*"],
       "groupName": "Svelte packages",
       "schedule": ["* 0-3 * * 1"]
     }
